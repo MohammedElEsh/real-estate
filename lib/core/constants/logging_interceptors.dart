@@ -50,9 +50,9 @@ class LoggingInterceptor extends Interceptor {
 
   @override
   void onError(DioException err, ErrorInterceptorHandler handler) {
-    print('❌ ERROR DETECTED');
-    print('Status Code: ${err.response?.statusCode}');
-    print('Error data: ${err.response?.data}');
+    log('❌ ERROR DETECTED');
+    log('Status Code: ${err.response?.statusCode}');
+    log('Error data: ${err.response?.data}');
     handler.next(err);
   }
 }
